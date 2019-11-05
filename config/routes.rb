@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   root "sessions#index"
+
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  
   resources :exercises
   resources :workouts
   resources :workout_plans
