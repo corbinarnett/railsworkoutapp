@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root "sessions#index"
   resources :exercises
   resources :workouts
   resources :workout_plans
