@@ -23,11 +23,16 @@ class WorkoutPlansController < ApplicationController
   end
 
   def edit
-
+    @workout_plan = WorkoutPlan.find_by(id: params[:id])
   end
 
   def update
-
+    @workout_plan = WorkoutPlan.find_by(id: params[:id])
+    if @workout_plan.update(workout_plan_params)
+      redirect_to workout_plan_path(@workout_plan)
+    else
+      render :edit
+    end
   end
 
   private 
