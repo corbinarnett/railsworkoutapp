@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   #creating a new session, model object(user) has already been created
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
 
   #creating a new model opject so we send the route to the users contoller
   get '/signup' => 'users#new'
