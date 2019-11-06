@@ -5,7 +5,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    if @user.save
+    if @user.valid? 
+      @user.save
       #user has been saved we now want to remeber the user when they go to the next page
       session[:user_id] = @user.id
       redirect_to user_path(@user)
