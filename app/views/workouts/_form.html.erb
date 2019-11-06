@@ -1,0 +1,21 @@
+<%= form_for @workout do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br></br>
+
+  <%= f.label :feeling %> 
+  <%= f.text_field :feeling %>
+  <br></br>
+
+  <%= f.label :completed %>
+  <%= f.check_box :completed, default: false  %>
+
+
+  <%# NEED TO ADD DATETIME %>
+
+    <br></br>
+
+  <%= f.submit%>
+
+<% end %>
