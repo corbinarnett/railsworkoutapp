@@ -1,0 +1,9 @@
+<h1>You're Plans</h1>
+
+<% @workout_plans.each do |plan|%>
+  <div>
+    <h3><%= link_to plan.title, workout_plan_path(plan) %> </h3>
+    <p>Description: <%= plan.description %> |
+    Active: <%= plan.active %>  </p>
+  </div><br>
+<% end %>
