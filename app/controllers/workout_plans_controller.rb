@@ -14,6 +14,7 @@ class WorkoutPlansController < ApplicationController
 
   def create
     # byebug
+    # build compared to new adds the newly created workout_plan to the workout_plans collection
     @workout_plan = current_user.workout_plans.build(workout_plan_params)
     if @workout_plan.save
       redirect_to workout_plan_path(@workout_plan)
