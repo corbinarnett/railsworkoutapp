@@ -13,7 +13,7 @@ class WorkoutPlansController < ApplicationController
   end
 
   def create
-    byebug
+    # byebug
     @workout_plan = current_user.workout_plans.build(workout_plan_params)
     if @workout_plan.save
       redirect_to workout_plan_path(@workout_plan)
@@ -33,6 +33,7 @@ class WorkoutPlansController < ApplicationController
   private 
 
   def workout_plan_params
+    # "workout_plan"=>{"title"=>"Push, Pull, Legs", "description"=>"This is my favorite workout plan", "active"=>"1"}
     params.require(:workout_plan).permit(:title, :description, :active)
   end
 end
