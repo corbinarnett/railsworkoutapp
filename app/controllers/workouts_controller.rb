@@ -10,6 +10,13 @@ class WorkoutsController < ApplicationController
   end
 
   def create
+    # byebug
+  end
 
+  private
+
+  def workout_params
+    # workout"=>{"title"=>"Push", "feeling"=>"Strong", "complete"=>"0"}
+    params.require(:workout).permit(:title, :feeling, :complete)
   end
 end

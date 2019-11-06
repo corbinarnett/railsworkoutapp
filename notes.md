@@ -2,12 +2,14 @@
 
 ***If you're creating an object through an association, build should be preferred over new as build keeps your in-memory object, user (in this case) in a consistent state even before any objects have been saved to the database.
 
+
+User
 Username:string
 Email:string
 Password_digest:string
 Has_many :workout_plans
 Has_many :workouts, through: workout_plans
-Has_many :exercises (they created)
+Has_many :exercises 
 
 
 Workout Plan  (Push Pull Legs, Full-Body, Upper/Lower)
