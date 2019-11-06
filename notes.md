@@ -1,4 +1,5 @@
-User
+***A session is just a place to store data during one request that you can read during later requests.
+
 Username:string
 Email:string
 Password_digest:string
